@@ -79,11 +79,13 @@ nav ul li a {
     width: 30px;
     height: 30px;
     margin: 0 2vw;
+    background-image: url("../Images/menu.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.burger img {
-    width: 100%;
-    height: 100%;
+.burger.close {
+    background-image: url("../Images/close.png");
 }
 
 .fond, .description {
@@ -289,12 +291,32 @@ form button {
 
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 770px) {
+    
+    .mainContainer {
+        min-height: 100vh;
+    }
+    
     .burger {
         display: block;
+        z-index: 4;
     }
     nav ul {
-        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100vw;
+        height: 100vh;
+        background-color: #8d9197;
+        z-index: 3;
+        transition: all 1.2s ease;
+    }
+    nav ul.open {
+        left: 0;
+    }
+    nav ul li {
+        margin: 3vh 0;
     }
     nav {
         display: flex;
@@ -303,7 +325,7 @@ form button {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     
     nav .logo {
         width: 15vw;
@@ -319,5 +341,15 @@ form button {
     }  
     .legals p {
         font-size: 8px;
+    }
+    .infos {
+        flex-direction: column;
+    }
+    .infos input[type=text], .infos input[type=email], .infos input[type=tel] {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .content .required {
+        padding-bottom: 10px;
     }
 }

@@ -12,10 +12,8 @@
             <div class="logo">
                 <img src="Images/logo.png" alt="logo">
             </div>
-            <div class="burger">
-                <img src="Images/menu.png" alt="menu">
-            </div>
-            <ul>
+            <div class="burger" id="burger"></div>
+            <ul id="nav-links">
                 <li>
                     <a href="#" class="light">Accueil</a>
                 </li>
@@ -92,12 +90,12 @@
             <div class="form" id="form">
                 <form action="">
                     <div class="infos">
-                        <input type="text" id="name" value="Nom*" required>
-                        <input type="text" id="firstname" value="Prénom*" required>
-                        <input type="email" id="email" value="Email*" required>
-                        <input type="tel" id="phone" value="Téléphone*" required>
+                        <input type="text" id="name" placeholder="Nom*" required>
+                        <input type="text" id="firstname" placeholder="Prénom*" required>
+                        <input type="email" id="email" placeholder="Email*" required>
+                        <input type="tel" id="phone" placeholder="Téléphone*" required>
                     </div>
-                    <input type="textarea" id="message" value="Message*" required>
+                    <input type="textarea" id="message" placeholder="Message*" required>
                     <p class="required">*champs obligatoires</p>
                     <div class="submit">
                         <button type="submit">envoyer</button>
